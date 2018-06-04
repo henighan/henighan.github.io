@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/* CSS goes here. */
+/*
+.p3103 { fill:rgb(247,251,255); }
+.p3800 { fill:rgb(8,48,107); }
+*/
+
+.option-select {
+  position: absolute;
+  top: 80px;
+  left: 300px;
+  fill: #64b646;
+  width: auto;
+}
+
+p {
+  margin-left: 50px;
+  width: 800px;
+}
+
+#tooltip {   
+  position: absolute;           
+  text-align: center;
+  padding: 20px;             
+  margin: 10px;
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 1px;      
+  border-radius: 2px;           
+  pointer-events: none;         
+}
+#tooltip h4{
+  margin:0;
+  font-size:14px;
+}
+#tooltip{
+  background:rgba(0,0,0,0.9);
+  border:1px solid grey;
+  border-radius:5px;
+  font-size:12px;
+  width:auto;
+  padding:4px;
+  color:white;
+  opacity:0;
+}
+#tooltip table{
+  table-layout:fixed;
+}
+#tooltip tr td{
+  padding:0;
+  margin:0;
+}
+#tooltip tr td:nth-child(1){
+  width:50px;
+}
+#tooltip tr td:nth-child(2){
+  text-align:center;
+}
+/*
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 100px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 20px sans-serif;    
+    background: lightsteelblue; 
+    border: 100px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
+*/
+
+div.tooltip { 
+    position: absolute;           
+    text-align: center;
+    padding: 20px;             
+    margin: 10px;
+    font: 100px sans-serif;        
+    background: lightsteelblue;   
+    border: 1px;      
+    border-radius: 2px;           
+    pointer-events: none;
+    background:rgba(0,0,0,0.9);
+    border:1px solid grey;
+    border-radius:5px;
+    font-size:12px;
+    width:auto;
+    padding:4px;
+    color:white;
+    opacity:0;
+}
+
+div.tooltip h4{
+  margin:0;
+  font-size:14px;
+}
+
+div.tooltip table{
+  table-layout:fixed;
+}
+div.tooltip tr td{
+  padding:0;
+  margin:0;
+}
+div.tooltip tr td:nth-child(1){
+  width:50px;
+}
+div.tooltip tr td:nth-child(2){
+  text-align:center;
+}
+
+
+// body { font: 12px Arial;}
+
+</style>
+
+<title>Campaign Funds Explorer</title>
+
+<body>
+
+<h1 style="margin-left:120px">Who's Funding Your Representative?</h1>
+
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script>
+
+/* JavaScript goes here. */
+var width = 960,
+    height = 500;
+
+/* How many subdivisions we have in the color scale */
+var COLOR_COUNTS = 9;
+
+// var COLOR_FIRST = "d3e5ff";
+// var COLOR_LAST = "08306B";
+
+var COLOR_FIRST = "ccffaa";
+var COLOR_LAST = "336600";
+
+
+function Interpolate(start, end, steps, count) {
+    var s = start,
+        e = end,
+        final = s + (((e - s) / steps) * count);
+    return Math.floor(final);
+}
+
+
+function Color(_r, _g, _b) {
+    var r, g, b;
+    var setColors = function(_r, _g, _b) {
+        r = _r;
+        g = _g;
+        b = _b;
+    };
+
+    setColors(_r, _g, _b);
+    this.getColors = function() {
+        var colors = {
+            r: r,
+            g: g,
+            b: b
+        };
+        return colors;
+    };
+}
+
+function valueFormat(d) {
+  if (d > 1000000000) {
+    return Math.round(d / 1000000000 * 10) / 10 + "B";
+  } else if (d > 1000000) {
+    return Math.round(d / 1000000 * 10) / 10 + "M";
+  } else if (d > 1000) {
+    return Math.round(d / 1000 * 10) / 10 + "K";
+  } else {
+    return d;
+  }
+}
+
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+function tooltipHtml(d){ /* function to create html content string in tooltip div. */
+  return "<h4>"+"</h4><table>"+
+    "<tr><td>$"+(valueFormat(dollarsById.get(d.id)))+"</td></tr>"+
+    "</table>";
+}
+
+/*var option_select = d3.select("#opts").append("select")
+    .attr("class", "option-select").attr("name", "option-select");
+
+/*var opt = option_select.append("option")
+      .attr("value", "test1")
+      .text("test2");
+opt.attr("selected", "true");
+var opt = option_select.append("option")
+      .attr("value", "test3")
+      .text("test4");
+
+option_select.on("change", console.log("dropdown change"));*/
+
+var rgb = hexToRgb(COLOR_FIRST);
+var COLOR_START = new Color(rgb.r, rgb.g, rgb.b);
+
+rgb = hexToRgb(COLOR_LAST);
+var COLOR_END = new Color(rgb.r, rgb.g, rgb.b);
+
+var startColors = COLOR_START.getColors(),
+    endColors = COLOR_END.getColors();
+
+var colors = [];
+
+for (var i = 0; i < COLOR_COUNTS; i++) {
+  var r = Interpolate(startColors.r, endColors.r, COLOR_COUNTS, i);
+  var g = Interpolate(startColors.g, endColors.g, COLOR_COUNTS, i);
+  var b = Interpolate(startColors.b, endColors.b, COLOR_COUNTS, i);
+  colors.push(new Color(r, g, b));
+}
+
+
+var color = colors[1].getColors();
+
+
+var quantize = d3.scale.quantize()
+    .domain([0, 500000])
+    .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
+
+
+var dispatch = d3.dispatch("load", "statechange");
+
+var letterbyname = d3.map();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+
+d3.json("us-congress-10m-ungrouped.json", function(error, us) {
+  if (error) return console.error(error);
+
+//console.log(money)
+//console.log(secnms)
+/*
+for (var i = 0; i < secnms.length; i++) {
+    letterbyname.set(secnms[i].letter, +secnms[i].secname)
+  }
+*/
+//console.log(secnms[1].letter)
+//console.log(secnms[1].secname)
+//console.log(letterbyname)
+//console.log(letterbyname.get(secnms[1].letter))
+
+
+
+//console.log(dollarsById)
+
+function drawmap(dollarsById){
+
+
+
+var districts = topojson.feature(us, us.objects.districts);
+/* var districts = topojson.mesh(us); */
+
+var projection = d3.geo.mercator();
+
+var path = d3.geo.path();
+
+svg.append("path")
+   .datum(districts).attr("d", path);
+
+// Define the div for the tooltip
+var div = d3.select("body").append("div") 
+    .attr("class", "tooltip")       
+    .style("opacity", 0);
+
+svg.selectAll(".districts")
+    .data(districts.features)
+  .enter().append("path")
+    .attr("class", function(d) { return "p" +  d.id })
+    .style("fill", function(d) {
+      if (dollarsById.get(d.id) != undefined){
+        var i = quantize(dollarsById.get(d.id))
+      var color = colors[i].getColors();
+      return "rgb(" + color.r + "," + color.g + "," + color.b +")"
+    } else {
+      //console.log(d.id, dollarsById.get(d.id),(dollarsById.get(d.id)==undefined))
+      return ""
+    }
+      
+    })
+    .attr("d", path)
+    .on("mouseover", function(d) {
+
+      console.log(d.id, dollarsById.get(d.id), quantize(dollarsById.get(d.id)))
+
+      div.transition()    
+                .duration(200)    
+                .style("opacity", .9);
+      div.html(tooltipHtml(d)).style("left", (d3.event.pageX) + "px")   
+                .style("top", (d3.event.pageY - 28) + "px");
+
+      })
+    .on("mouseout", function(d) {   
+            div.transition()    
+                .duration(500)    
+                .style("opacity", 0);
+              });
+
+/*
+    .on("mousemove", function(d) {
+
+      console.log(d.id, dollarsById.get(d.id), quantize(dollarsById.get(d.id)))
+
+      });
+*/
+
+/*    .style("fill", "#ddc")   */
+svg.append("path")
+      .datum(topojson.mesh(us, us.objects.districts, function(a, b) { return a !== b; }))
+      .attr("class", "boundaries")
+      .style("fill", "none")
+      .style("stroke", "#777")
+      .attr("d", path);
+
+// console.log(svg)
+
+}
+
+/*
+
+var select = d3.select("body")
+    .append("div")
+    .append("select")
+    .attr("class", "option-select")
+      .on("change", function() { console.log('dropdown change') });
+
+*/
+
+var jvar = [
+  {"Name": "Agribusiness", "Letter": "A"},
+  {"Name": "Construction", "Letter": "B"},
+  {"Name": "Communications/Electronics", "Letter": "C"},
+  {"Name": "Defense", "Letter": "D"},
+  {"Name": "Energy & Natural Resources", "Letter": "E"},
+  {"Name": "Finance, Insurance & Real Estate", "Letter": "F"},
+  {"Name": "Health", "Letter": "H"},
+  {"Name": "Ideological/Single Issue", "Letter": "J"},
+  {"Name": "Lawyers & Lobbyists", "Letter": "K"},
+  {"Name": "Labor", "Letter": "L"},
+  {"Name": "Transportation", "Letter": "T"},
+]
+
+var sectornames = ['Agribusiness', 'Construction', 'Communications/Electronics', 'Defense',
+  'Energy & Natural Resources', 'Finance, Insurance, & Real Estate', 'Health', 
+  'Ideological/Single Issue', 'Lawyers & Lobbyists', 'Labor', 'Transportation']
+
+var goodletters = ['A', 'B', 'C', 'D', 'E', 'F', 'H', 'J', 
+  'K', 'L', 'T']
+
+
+
+/*
+
+select.selectAll("option")
+  .data(goodletters)
+  .enter().append("option")
+  .attr("value", function(d) { return d; })
+  .text(function(d) { return d; });
+
+*/
+
+function makedollarsmap(money, letter){
+
+  var dollarsById = d3.map();
+
+  var moneykeys = d3.keys(money[1]);
+  var myindex = moneykeys.indexOf(letter);
+
+  money.forEach(function(d) {dollarsById.set(d.geoid, d3.values(d)[myindex])} );
+  // console.log(dollarsById.get(2707))
+  return dollarsById;
+
+}
+
+
+d3.csv("alletters.csv", function(error, money) {
+  if (error) return console.error(error);
+  
+  dispatch.load(money)
+  dispatch.statechange("A")
+  // console.log(money)
+
+  //console.log(makedollarsmap(money, "A"))
+
+
+})
+
+// A drop-down menu for selecting a state; uses the "menu" namespace.
+dispatch.on("load.menu", function(money) {
+  var select = d3.select("body")
+    .append("div")
+    .append("select")
+    .attr("class", "option-select")
+      .on("change", function() { dispatch.statechange(this.value); });
+
+  select.selectAll("option")
+      .data(jvar)
+    .enter().append("option")
+      .attr("value", function(d) { return d.Letter; })
+      .text(function(d) { return d.Name; });
+
+  select.selectAll("option")
+
+  dispatch.on("statechange.menu", function(letter) {
+    select.property("value", letter);
+  });
+});
+
+dispatch.on("load.choropleth", function(money) {
+
+  dispatch.on("statechange.choropleth", function(letter) {
+
+    dollarsById = makedollarsmap(money, letter);
+    drawmap(dollarsById)
+
+  })
+
+})
+
+
+//dispatch.load(dollarsById)
+
+/*
+var option_select = d3.select("#opts").append("select")
+    .attr("class", "option-select").attr("name", "option-select")
+    .on("change", console.log('Dropdown change'));
+option_select.append("option").attr("value", "test").text("test")
+// options = option_select.selectAll('option').data(dd);
+*/
+
+
+/*option_select.on("change", console.log("dropdown change"));*/
+
+});
+
+</script>
+
+<p>Above is a map of the UC congressional districts. Each district is colored based on how much the Representative received from 11 different sectors of the economy, which darker colors being more money. This particular example is the 113th congress.</p>
+
+<img src="opensecrets_logo.gif" alt="Mountain View" style="">
+
+</body>
