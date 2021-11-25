@@ -1,1049 +1,942 @@
-
 <!-- Heading -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <meta name="viewport" content="width=device-width; user-scalable=0;">
-    <meta name="generator"
-      content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-      /* Color scheme stolen from Sergey Karayev */
-      a {
-      color: #1772d0;
-      text-decoration:none;
-      }
-      a:focus, a:hover {
-      color: #f09228;
-      text-decoration:none;
-      }
-      body,td,th,tr,p,a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-      }
-      strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      }
-      heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-      }
-      papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700
-      }
-      name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-      }
-    </style>
 
-    <title>Tom Henighan</title>
-  
-    <link href="css" rel="stylesheet" type="text/css">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width; user-scalable=0;">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style id="style-1-cropbar-clipper">
-    /* Copyright 2014 Evernote Corporation. All rights reserved. */
-      .en-markup-crop-options {
-          top: 18px !important;
-          left: 50% !important;
-          margin-left: -100px !important;
-          width: 200px !important;
-          border: 2px rgba(255,255,255,.38) solid !important;
-          border-radius: 4px !important;
-      }
+  <title>Tom Henighan</title>
 
-      .en-markup-crop-options div div:first-of-type {
-          margin-left: 0px !important;
-      }
-    </style>
+  <link href="css" rel="stylesheet" type="text/css">
 
-<!-- Google Analytics -->
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-			ga('create', 'UA-103300506-1', 'auto');
-			ga('send', 'pageview');
+    ga('create', 'UA-103300506-1', 'auto');
+    ga('send', 'pageview');
 
-		</script>
-  </head>
-  
+  </script>
+</head>
+
 <!-- Body -->
 
-  <body>
-    <table width="800" border="0" align="center" cellspacing="0"
-    cellpadding="0">
-      <tbody>
-        <tr>
-          <td>
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="67%" valign="middle">
-                    <p align="center">
-                      <name>Tom Henighan</name>
-                    </p>
-                      I'm a member of the technical staff at <a target="_blank"
-                      href="https://anthropic.com">Anthropic</a>. My
-                      previous roles include member of the technical staff at
-                      <a target="_blank" href="https://openai.com"> OpenAI</a>
-                      and artificial intelligence engineer at <a
-                      target="_blank" href="https://beehive.ai/"> Beehive
-                      AI</a>. I did my PhD in Physics at Stanford.
-                    <p>
-                    </p>
-                    <p>
-                      Some projects and publications can be found below.
-                    </p>
-                    <p align="center">
-                      <a href="mailto:henighan.2@gmail.com">Email</a>
-                      &nbsp;/&nbsp;
-                      <a target="_blank"
-                      href="https://scholar.google.com/citations?user=8h3AFugAAAAJ&hl=en">
+<body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+        <td>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td width="67%" valign="middle">
+                  <p align="center">
+                    <name>Tom Henighan</name>
+                  </p>
+                  I'm a member of the technical staff at <a target="_blank" href="https://anthropic.com">Anthropic</a>.
+                  My
+                  previous roles include member of the technical staff at
+                  <a target="_blank" href="https://openai.com"> OpenAI</a>
+                  and artificial intelligence engineer at <a target="_blank" href="https://beehive.ai/"> Beehive
+                    AI</a>. I did my PhD in Physics at Stanford.
+                  <p>
+                  </p>
+                  <p>
+                    Some projects and publications can be found below.
+                  </p>
+                  <p align="center">
+                    <a href="mailto:henighan.2@gmail.com">Email</a>
+                    &nbsp;/&nbsp;
+                    <a target="_blank" href="https://scholar.google.com/citations?user=8h3AFugAAAAJ&hl=en">
                       Scholar</a>
-                      &nbsp;/&nbsp;
-                      <a target="_blank"
-                      href="https://www.linkedin.com/in/tom-henighan-757498123/">LinkedIn</a>
-                    </p>
-                  </td>
-                  <td width="33%">
-                    <img src="./images/maface_round2.gif", width="110%">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    &nbsp;/&nbsp;
+                    <a target="_blank" href="https://www.linkedin.com/in/tom-henighan-757498123/">LinkedIn</a>
+                  </p>
+                </td>
+                <td width="33%">
+                  <img src="./images/maface_round2.gif" , width="110%">
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-<!-- OpenAI -->
+          <!-- OpenAI -->
 
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>OpenAI</heading>
-                    <p>
-                      My research at OpenAI focused on scaling laws. I also contributed to the GPT-3 project.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td width="100%" valign="middle">
+                  <heading>OpenAI</heading>
+                  <p>
+                    My research at OpenAI focused on scaling laws. I also contributed to the GPT-3 project.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://arxiv.org/abs/2102.01293">
-                        <img src="./images/transfer_scaling.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://arxiv.org/abs/2102.01293">
-                        <papertitle>
-                        Scaling Laws for Transfer
-                        </papertitle>
-                      </a>
-                      <br>
-                      D Hernandez, J Kaplan, <strong>T Henighan</strong>, S McCandlish
-                      <br>
-                      <em>
-                        Arxiv
-                      </em>, 2021 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://arxiv.org/abs/2102.01293">Paper</a>
-                    </p>
-                    <p>
-                    We studied the empirical scaling of pre-training on one
-                    dataset, then fine-tuning to another. We find the
-                    "effective data transferred" from pre-training to
-                    fine-tuning follows predictable trends.
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://arxiv.org/abs/2010.14701">
-                        <img src="./images/params_vs_model_size.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://arxiv.org/abs/2010.14701">
-                        <papertitle>
-                        Scaling Laws for Autoregressive Generative Modeling
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>T Henighan</strong>*, J Kaplan*, M Katz*, M Chen, C
-                      Hesse, J Jackson, H Jun, T Brown, P Dhariwal, S Gray, C
-                      Hallacy, B Mann, A Radford, A Ramesh, N Ryder, D Ziegler,
-                      J Schulman, D Amodei, S McCandlish
-                      <br>
-                      <em>
-                        Arxiv
-                      </em>, 2020 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://arxiv.org/abs/2010.14701">Paper</a> / 
-                      <a target="_blank" href="https://www.skynettoday.com/podcast/scaling-laws">Podcast Interview</a>
-                    </p>
-                    <p>
-                    We studied empirical scaling laws in four domains:
-                    image modeling, video modeling, multimodal image+text
-                    modeling, and mathematical problem solving. In all cases,
-                    autoregressive Transformers smoothly improve in performance
-                    as model size and compute budgets increase, following a
-                    power-law plus constant scaling law.
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://arxiv.org/abs/2005.14165">
-                        <img src="./images/gpt3_scaling.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://arxiv.org/abs/2005.14165">
-                        <papertitle>
-                        Language Models are Few-Shot Learners
-                        </papertitle>
-                      </a>
-                      <br>
-                      T Brown*, B Mann*, N Ryder*, M Subbiah*, J Kaplan, P
-                      Dhariwal, A Neelakantan, P Shyam, G Satstry, A Askell, S
-                      Agarwal, A Herbert-Voss, G Krueger,
-                      <strong>T Henighan</strong>,
-                      R Child, A Ramesh, D Ziegler, J Wu, C
-                      Winter, C Hesse, M Chen, E Sigler, M Litwin, S Gray, B Chess,
-                      J Clark, C Berner, S McCandlish, A Radford, I Sutskever, D
-                      Amodei
-                      <br>
-                      <em>
-                        Arxiv
-                      </em>, 2020 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://arxiv.org/abs/2005.14165">Paper</a> /
-                      <a target="_blank" href="https://arxiv.org/abs/2005.14165">Wikipedia Article</a>
-                    </p>
-                    <p>
-                    This is the paper which describes GPT-3, a 175 billion
-                    parameter language model which was competitive with
-                    state-of-the-art performance on a wide variety of
-                    benchmarks.
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://arxiv.org/abs/2001.08361">
-                        <img src="./images/lang_scaling.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://arxiv.org/abs/2001.08361">
-                        <papertitle>
-                        Scaling Laws for Neural Language Models
-                        </papertitle>
-                      </a>
-                      <br>
-                      J Kaplan*, S McCandlish*, 
-                      <strong>T Henighan</strong>,
-                      T Brown, B Chess, R Child, S Gray, A Radford, J Wu, D Amodei
-                      <br>
-                      <em>
-                        Arxiv
-                      </em>, 2020 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://arxiv.org/abs/2001.08361">Paper</a>
-                    </p>
-                    <p>
-                    We found that language modeling loss scales as a power-law
-                    with model size, dataset size, and the amount of compute
-                    used for training, with some trends spanning more than
-                    seven orders of magnitude.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-<!-- Projects -->
-
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>Projects</heading>
-                    <p>
-                      Some of these were projects for classes I took while at
-                      Stanford, while others were just for fun.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://github.com/henighan/deeprl-intro">
-                        <img src="./images/ppo_halfcheetah_compressed.gif", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://github.com/henighan/deeprl-intro">
-                        <papertitle>
-                        Deep Reinforcement Learning with OpenAI Gym
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>
-                      <br>
-                      <em>
-                        Weekend Project
-                      </em>, 2019 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://github.com/henighan/deeprl-intro">Github</a>
-                    </p>
-                    <p>
-                      Read through
-                      <a target="_blank" href="https://spinningup.openai.com/en/latest/">
-                          OpenAI's spinning up</a> materials and was
-                      inspired to implement some algorithms myself. This gif
-                      is the 'HalfCheetah-v2' environment. I trained a
-                      proximal policy optimization agent to make it run.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="https://github.com/henighan/blackjack-rl">
-                        <img src="./images/strategy_card.gif", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://github.com/henighan/blackjack-rl">
-                        <papertitle>
-                        Blackjack Reinforcement Learning
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>
-                      <br>
-                      <em>
-                        Weekend Project
-                      </em>, 2019 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://github.com/henighan/blackjack-rl">Github</a>
-                    </p>
-                    <p>
-                      Built from scratch a little python package for using
-                      reinforcement learning to find the optimal strategy
-                      on blackjack. The gif to the left shows how the randomly-
-                      initialized optimal strategy evolves as the agent trains
-                      over more episodes.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="mnist_app/index.html">
-                        <img src="./images/mnist_app.gif", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="./mnist_app/index.html">
-                        <papertitle>
-                        MNIST Tensorflow.js webapp
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>
-                      <br>
-                      <em>
-                        Weekend Project
-                      </em>, 2018 &nbsp;
-                      <br>
-                      <a target="_blank" href="mnist_app/index.html">App</a>
-                    </p>
-                    <p>
-                      Trained a convolution neural network for the task of
-                      recoginizing digits from the 
-                      <a target="_blank" href="http://yann.lecun.com/exdb/mnist/">
-                          MNIST dataset</a>. Deployed this network using 
-                      <a target="_blank" href="https://js.tensorflow.org/">
-                          tensorflow.js</a>, so the network actually runs
-                      in your browser! (And saves the server costs of hosting
-                      it :)). Built a little webapp so you can write a digit 
-                      in the box and get the network's prediction. Tuned 
-                      the network's hyperparameters using the implementation of
-                       bayesian optimization from 
-                      <a target="_blank" href="https://scikit-optimize.github.io/">
-                          skopt</a>.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="pdfs/stylexfer_examples.pdf">
-                        <img src="./images/stylexfer_maface.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="./pdfs/cs231n-project.pdf">
-                        <papertitle>
-                        Spatial Control of Style Blending in Neural Style Transfer
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>
-                      <br>
-                      <em>
-                        CS231n: Convolutional Neural Networks for Visual Recognition
-                      </em>, 2017 &nbsp;
-                      <br>
-                      <a target="_blank" href="./pdfs/cs231n-project.pdf">PDF</a>
-                      /
-                      <a target="_blank"
-                      href="./pdfs/stylexer_poster.pdf">Poster</a>
-                      /
-                      <a target="_blank" href="pdfs/stylexfer_examples.pdf">
-                        Examples
-                      </a>
-                    </p>
-                    <p>
-                      Implemented an algorithm for neural style transfer
-                      which takes in one or more "style" images (usually
-                      paintings) and a "content" image (usually a photograph)
-                      and renders the content image in the "style" of the 
-                      style image. Inspired by the work of 
-                      <a target="_blank" href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Gatys_Image_Style_Transfer_CVPR_2016_paper.html">
-                        Gatys et al</a>, my implementation allows for spatial control
-                      of blending multiple styles, allowing for smooth
-                      transitions from one style to another. See some examples
-                      <a target="_blank" href="pdfs/stylexfer_examples.pdf">
-                        here</a>.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="pdfs/final_poster.pdf">
-                        <img src="./images/context_vec_diff.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="./pdfs/iterative-attention-network.pdf">
-                        <papertitle>
-                        Iterative Attention Networks for Question Answering
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>
-                      <br>
-                      <em>
-                        CS224n: Natural Language Processing with Deep Learning
-                      </em>, 2017 &nbsp;
-                      <br>
-                      <a target="_blank" href="./pdfs/iterative-attention-network.pdf">PDF</a>
-                      /
-                      <a target="_blank"
-                      href="./pdfs/final_poster.pdf">Poster</a>
-                      /
-                      <a target="_blank" href="pdfs/squad_itatt_examples.pdf">
-                        Example Predictions
-                      </a>
-                    </p>
-                    <p>
-                      Designed a deep learning model which takes
-                      in a paragraph from wikipedia and then answers a
-                      question based on that paragraph. Trained on the
-                      <a target="_blank" href="https://rajpurkar.github.io/SQuAD-explorer/">
-                        SQuAD
-                      </a> dataset. My 
-                      <a target="_blank"
-                        href="http://web.stanford.edu/class/cs224n/reports.html">
-                        poster was recognized
-                      </a> as outstanding by the course staff. Check out
-                      some example answers produced by the model
-                      <a target="_blank" href="./pdfs/squad_itatt_examples.pdf">
-                        here
-                      </a>.
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a target="_blank" href="./money_app/index.html">
-                        <img src="./images/money_map.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank"
-                      href="./money_app/index.html">
-                        <papertitle>
-                        Predicting Bill Votes in the House of Representatives
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>, 
-                      Scott Kravitz
-                      <br>
-                      <em>CS229: Machine Learning</em>, 2015
-                      <br>
-                      <a target="_blank"
-                      href="./money_app/index.html">
-                      Interactive Visualization</a>
-                      /
-                      <a target="_blank"
-                      href="./pdfs/vote_prediction.pdf">PDF</a>
-                      / 
-                      <a target="_blank"
-                      href="pdfs/poster_final.pdf">
-                      Poster</a>
-                    </p>
-                    <p>
-                      We created a model for predicting how a member of 
-                      congress would vote not based on their voting history,
-                      but on their party and their campaign contributions.
-                      Check out the
-                      <a target="_blank" href="./money_app/index.html">
-                        interactive visualization
-                      </a> which shows funding by district and economic
-                      sector.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-<!-- PhD Research -->
-
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>PhD Research</heading>
-                    <p>
-                    I completed my PhD in the Physics department at Stanford. 
-                    Under my advisor, 
-                    <a target="_blank" 
-                      href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
-                      David Reis</a>, I studied atomic motion in solids
-                    using the
-                    <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
-                      Linac Coherent Light Source</a>. <!I've led three
-                    LCLS experiments, and analyzed the ~50 TB of data
-                    resulting from each.>
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="25%">
-                    <div style="position:relative;height:0;padding-bottom:56.25%">
-                      <iframe src="https://www.youtube.com/embed/HXx_QI5htRY?ecver=2"
-                        width="120%"
-                        frameborder="0"
-                        style="position:absolute;width:100%;height:100%;left:0" allowfullscreen>
-                      </iframe>
-                    </div>
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank" href="https://youtu.be/HXx_QI5htRY">
-                        <papertitle>
-                        Dissertation: Couplings of Phonons to Light
-                        and One Another Studied with LCLS
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>Tom Henighan</strong>, advisor:
-                      <a target="_blank" href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
-                        David Reis
-                      </a>
-                      <br>
-                      <em>
-                        Stanford University Department of Physics
-                      </em>, 2016 &nbsp;
-                      <br>
-                      <a target="_blank" href="https://youtu.be/HXx_QI5htRY">
-                        Defense</a>
-                      / 
-                      <a target="_blank" href="https://searchworks.stanford.edu/view/12082113">
-                        Thesis</a>
-                    </p>
-                    <p>
-                      The
-                      <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
-                        Linac Coherent Light Source
-                      </a>(LCLS) is the first x-ray source of its kind,
-                      providing a combination of atomic-scale wavelengths,
-                      temporally-short pulses, and high-flux. This allows for
-                      previously impossible time-domain measurements of
-                      phonons. My collaborators and I demonstrated techinques
-                      that not only allow for measurement of phonon
-                      dispersions and lifetimes, but momentum-resolved
-                      phonon-phonon coupling.
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a
-                        target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
-                        <img src="./images/two_pump.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
-                        <papertitle>
-                        Control of two-phonon correlations and the mechanism
-                        of high-wavevector phonon generation by ultrafast
-                        light pulses
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>T Henighan</strong>,
-                      <a target="_blank"
-                        href="https://ultrafast.stanford.edu/people/mariano-trigo">
-                        M Trigo
-                      </a>, M Chollet, J N Clark, S Fahy, J M Glownia,
-                      M P Jiang, M Kozina, H Liu, S Song, D Zhu, and
-                      <a target="_blank"
-                        href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
-                        D A Reis
-                      </a>
-                      <br>
-                      <em>
-                        Physical Review B Rapid Communications
-                      </em>, 2016 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
-                        Phys Rev B</a>
-                      /
-                      <a target="_blank" href="https://arxiv.org/abs/1510.02403">
-                        arXiv
-                      </a>
-                    </p>
-                    <p>
-                     We showed that in Fourier-Transfor Inelastic X-ray
-                     Scattering (FTIXS) measurements on high-quality crystals,
-                     the pump laser couples to high-wavevector phonons
-                     primarily through second-order processes.
-                    </p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td width="25%">
-                    <div class="one">
-                      <a
-                        target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
-                        <img src="./images/iron_wiggles.png", width="120%">
-                      </a>
-                    </div>                
-                  </td>
-                  <td valign="middle" width="75%">
-                    <p>
-                      <a target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
-                        <papertitle>
-                        Generation mechanism of terahertz coherent acoustic
-                        phonons in Fe
-                        </papertitle>
-                      </a>
-                      <br>
-                      <strong>T Henighan</strong>,
-                      <a target="_blank"
-                        href="https://ultrafast.stanford.edu/people/mariano-trigo">
-                        M Trigo
-                      </a>,
-                      <a target="_blank"
-                         href="https://www.linkedin.com/in/bonettistefano/">
-                        Stefano Bonetti
-                      </a>, P Granitzka, D Higley, Z Chen, M P Jiang,
-                      R Kukreja, A Gray, A H Reid, E Jal, M C Hoffmann,
-                      M Kozina, S Song, M Chollet, D Zhu, P F Xu, J Jeong,
-                      K Carva, P Maldonado, P M Oppeneer, M G Samant,
-                      S P Parkin,
-                      <a target="_blank"
-                         href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
-                        D A Reis
-                      </a>, and H A Durr
-                      <br>
-                      <em>
-                        Physical Review B Rapid Communications
-                      </em>, 2016 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
-                        Phys Rev B</a>
-                      /
-                      <a target="_blank" href="https://arxiv.org/pdf/1509.03348.pdf">
-                        arXiv
-                      </a>
-                    </p>
-                    <p>
-                     We were able to make time-resolved measurements
-                     of acoustic phonons with frequencies up to 3.5 THz
-                     in iron using
-                      <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
-                        LCLS</a>.
-                    </p>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-
-
-<!-- Fulbright Research -->
-
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>Fulbright Research</heading>
-                    <p>
-                      I spent a year at
-                      <a target="_blank" href="http://www.tudelft.nl/en/">
-                        Delft Institute of Technology
-                      </a>(TUDelft) as a
-                      <a target="_blank"
-                        href="https://en.wikipedia.org/wiki/Fulbright_Program">
-                        Fulbright Scholar
-                      </a>doing biophysics research in the lab of
-                      <a target="_blank" href="http://ceesdekkerlab.tudelft.nl/">
-                        Cees Dekker</a>.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
 
               <tr>
                 <td width="25%">
                   <div class="one">
-                    <a target="_blank"
-                       href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
-                      <img src="./images/cycloid.png", width="120%">
+                    <a target="_blank" href="https://arxiv.org/abs/2102.01293">
+                      <img src="./images/transfer_scaling.png" , width="120%">
                     </a>
-                  </div>                
+                  </div>
                 </td>
-                <td valign="middle" width="75%">
-                  <p>
-                    <a target="_blank"
-                      href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
-                      <papertitle>
-                      Magnetic Forces and DNA Mechanics in
-                      Multiplexed Magnetic Tweezers
-                      </papertitle>
-                    </a>
-                    <br>
-                    I De Vlaminck*,
-                      <strong>T Henighan</strong>*, M T J van Loenhout,
-                      D Burnham,
-                      <a target="_blank"
-                        href="http://ceesdekkerlab.tudelft.nl/">
-                        C Dekker
-                      </a> *authors contributed equally
-                      <br>
-                      <em>
-                        PLOS ONE
-                      </em>, 2012 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
-                        PLOS ONE</a>
-                    </p>
-                    <p>
-                     We demonstrated ways of parallelizing single-molecule
-                     measurements with magnetic tweezers, allowing for
-                     simultaneous measurement of hundreds of molecules
-                     instead of just a few.
-                    </p>
-                  </td>
-                </tr>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://arxiv.org/abs/2102.01293">
+              <papertitle>
+                Scaling Laws for Transfer
+              </papertitle>
+            </a>
+            <br>
+            D Hernandez, J Kaplan, <strong>T Henighan</strong>, S McCandlish
+            <br>
+            <em>
+              Arxiv
+            </em>, 2021 &nbsp;
+            <br>
+            <a target="_blank" href="https://arxiv.org/abs/2102.01293">Paper</a>
+          </p>
+          <p>
+            We studied the empirical scaling of pre-training on one
+            dataset, then fine-tuning to another. We find the
+            "effective data transferred" from pre-training to
+            fine-tuning follows predictable trends.
+          </p>
+        </td>
+      </tr>
 
-                <tr>
-                <td width="25%">
-                  <div class="one">
-                    <a target="_blank"
-                      href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
-                      <img src="./images/parallel_tweezers.png", width="120%">
-                    </a>
-                  </div>                
-                </td>
-                <td valign="middle" width="75%">
-                  <p>
-                    <a target="_blank"
-                      href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
-                      <papertitle>
-                      Highly Parallel Magnetic Tweezers by
-                      Targeted DNA Tethering
-                      </papertitle>
-                    </a>
-                    <br>
-                    I De Vlaminck,
-                      <strong>T Henighan</strong>, M T J van Loenhout,
-                      I Pfeiffer, J Huijts, J W J Kerssemakers, A J Katan,
-                      A van Langen-Suurling, E van der Drift, C Wyman,
-                      <a target="_blank"
-                        href="http://ceesdekkerlab.tudelft.nl/">
-                        C Dekker
-                      </a>
-                      <br>
-                      <em>
-                        Nano Letters
-                      </em>, 2011 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
-                        Nano Lett</a>
-                    </p>
-                    <p>
-                     Patterning tether sites of the DNA strands allowed
-                     for furter improvement in parallelization capacity.
-                    </p>
-                  </td>
-                </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://arxiv.org/abs/2010.14701">
+              <img src="./images/params_vs_model_size.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://arxiv.org/abs/2010.14701">
+              <papertitle>
+                Scaling Laws for Autoregressive Generative Modeling
+              </papertitle>
+            </a>
+            <br>
+            <strong>T Henighan</strong>*, J Kaplan*, M Katz*, M Chen, C
+            Hesse, J Jackson, H Jun, T Brown, P Dhariwal, S Gray, C
+            Hallacy, B Mann, A Radford, A Ramesh, N Ryder, D Ziegler,
+            J Schulman, D Amodei, S McCandlish
+            <br>
+            <em>
+              Arxiv
+            </em>, 2020 &nbsp;
+            <br>
+            <a target="_blank" href="https://arxiv.org/abs/2010.14701">Paper</a> /
+            <a target="_blank" href="https://www.skynettoday.com/podcast/scaling-laws">Podcast Interview</a>
+          </p>
+          <p>
+            We studied empirical scaling laws in four domains:
+            image modeling, video modeling, multimodal image+text
+            modeling, and mathematical problem solving. In all cases,
+            autoregressive Transformers smoothly improve in performance
+            as model size and compute budgets increase, following a
+            power-law plus constant scaling law.
+          </p>
+        </td>
+      </tr>
 
-              </tbody>
-            </table>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://arxiv.org/abs/2005.14165">
+              <img src="./images/gpt3_scaling.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://arxiv.org/abs/2005.14165">
+              <papertitle>
+                Language Models are Few-Shot Learners
+              </papertitle>
+            </a>
+            <br>
+            T Brown*, B Mann*, N Ryder*, M Subbiah*, J Kaplan, P
+            Dhariwal, A Neelakantan, P Shyam, G Satstry, A Askell, S
+            Agarwal, A Herbert-Voss, G Krueger,
+            <strong>T Henighan</strong>,
+            R Child, A Ramesh, D Ziegler, J Wu, C
+            Winter, C Hesse, M Chen, E Sigler, M Litwin, S Gray, B Chess,
+            J Clark, C Berner, S McCandlish, A Radford, I Sutskever, D
+            Amodei
+            <br>
+            <em>
+              Arxiv
+            </em>, 2020 &nbsp;
+            <br>
+            <a target="_blank" href="https://arxiv.org/abs/2005.14165">Paper</a> /
+            <a target="_blank" href="https://arxiv.org/abs/2005.14165">Wikipedia Article</a>
+          </p>
+          <p>
+            This is the paper which describes GPT-3, a 175 billion
+            parameter language model which was competitive with
+            state-of-the-art performance on a wide variety of
+            benchmarks.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://arxiv.org/abs/2001.08361">
+              <img src="./images/lang_scaling.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://arxiv.org/abs/2001.08361">
+              <papertitle>
+                Scaling Laws for Neural Language Models
+              </papertitle>
+            </a>
+            <br>
+            J Kaplan*, S McCandlish*,
+            <strong>T Henighan</strong>,
+            T Brown, B Chess, R Child, S Gray, A Radford, J Wu, D Amodei
+            <br>
+            <em>
+              Arxiv
+            </em>, 2020 &nbsp;
+            <br>
+            <a target="_blank" href="https://arxiv.org/abs/2001.08361">Paper</a>
+          </p>
+          <p>
+            We found that language modeling loss scales as a power-law
+            with model size, dataset size, and the amount of compute
+            used for training, with some trends spanning more than
+            seven orders of magnitude.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Projects -->
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="100%" valign="middle">
+          <heading>Projects</heading>
+          <p>
+            Some of these were projects for classes I took while at
+            Stanford, while others were just for fun.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://github.com/henighan/deeprl-intro">
+              <img src="./images/ppo_halfcheetah_compressed.gif" , width="120%">
+            </a>
+          </div>
+        </td>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://github.com/henighan/deeprl-intro">
+              <papertitle>
+                Deep Reinforcement Learning with OpenAI Gym
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>
+            <br>
+            <em>
+              Weekend Project
+            </em>, 2019 &nbsp;
+            <br>
+            <a target="_blank" href="https://github.com/henighan/deeprl-intro">Github</a>
+          </p>
+          <p>
+            Read through
+            <a target="_blank" href="https://spinningup.openai.com/en/latest/">
+              OpenAI's spinning up</a> materials and was
+            inspired to implement some algorithms myself. This gif
+            is the 'HalfCheetah-v2' environment. I trained a
+            proximal policy optimization agent to make it run.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://github.com/henighan/blackjack-rl">
+              <img src="./images/strategy_card.gif" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://github.com/henighan/blackjack-rl">
+              <papertitle>
+                Blackjack Reinforcement Learning
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>
+            <br>
+            <em>
+              Weekend Project
+            </em>, 2019 &nbsp;
+            <br>
+            <a target="_blank" href="https://github.com/henighan/blackjack-rl">Github</a>
+          </p>
+          <p>
+            Built from scratch a little python package for using
+            reinforcement learning to find the optimal strategy
+            on blackjack. The gif to the left shows how the randomly-
+            initialized optimal strategy evolves as the agent trains
+            over more episodes.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="mnist_app/index.html">
+              <img src="./images/mnist_app.gif" , width="120%">
+            </a>
+          </div>
+        </td>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="./mnist_app/index.html">
+              <papertitle>
+                MNIST Tensorflow.js webapp
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>
+            <br>
+            <em>
+              Weekend Project
+            </em>, 2018 &nbsp;
+            <br>
+            <a target="_blank" href="mnist_app/index.html">App</a>
+          </p>
+          <p>
+            Trained a convolution neural network for the task of
+            recoginizing digits from the
+            <a target="_blank" href="http://yann.lecun.com/exdb/mnist/">
+              MNIST dataset</a>. Deployed this network using
+            <a target="_blank" href="https://js.tensorflow.org/">
+              tensorflow.js</a>, so the network actually runs
+            in your browser! (And saves the server costs of hosting
+            it :)). Built a little webapp so you can write a digit
+            in the box and get the network's prediction. Tuned
+            the network's hyperparameters using the implementation of
+            bayesian optimization from
+            <a target="_blank" href="https://scikit-optimize.github.io/">
+              skopt</a>.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="pdfs/stylexfer_examples.pdf">
+              <img src="./images/stylexfer_maface.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="./pdfs/cs231n-project.pdf">
+              <papertitle>
+                Spatial Control of Style Blending in Neural Style Transfer
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>
+            <br>
+            <em>
+              CS231n: Convolutional Neural Networks for Visual Recognition
+            </em>, 2017 &nbsp;
+            <br>
+            <a target="_blank" href="./pdfs/cs231n-project.pdf">PDF</a>
+            /
+            <a target="_blank" href="./pdfs/stylexer_poster.pdf">Poster</a>
+            /
+            <a target="_blank" href="pdfs/stylexfer_examples.pdf">
+              Examples
+            </a>
+          </p>
+          <p>
+            Implemented an algorithm for neural style transfer
+            which takes in one or more "style" images (usually
+            paintings) and a "content" image (usually a photograph)
+            and renders the content image in the "style" of the
+            style image. Inspired by the work of
+            <a target="_blank"
+              href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Gatys_Image_Style_Transfer_CVPR_2016_paper.html">
+              Gatys et al</a>, my implementation allows for spatial control
+            of blending multiple styles, allowing for smooth
+            transitions from one style to another. See some examples
+            <a target="_blank" href="pdfs/stylexfer_examples.pdf">
+              here</a>.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="pdfs/final_poster.pdf">
+              <img src="./images/context_vec_diff.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="./pdfs/iterative-attention-network.pdf">
+              <papertitle>
+                Iterative Attention Networks for Question Answering
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>
+            <br>
+            <em>
+              CS224n: Natural Language Processing with Deep Learning
+            </em>, 2017 &nbsp;
+            <br>
+            <a target="_blank" href="./pdfs/iterative-attention-network.pdf">PDF</a>
+            /
+            <a target="_blank" href="./pdfs/final_poster.pdf">Poster</a>
+            /
+            <a target="_blank" href="pdfs/squad_itatt_examples.pdf">
+              Example Predictions
+            </a>
+          </p>
+          <p>
+            Designed a deep learning model which takes
+            in a paragraph from wikipedia and then answers a
+            question based on that paragraph. Trained on the
+            <a target="_blank" href="https://rajpurkar.github.io/SQuAD-explorer/">
+              SQuAD
+            </a> dataset. My
+            <a target="_blank" href="http://web.stanford.edu/class/cs224n/reports.html">
+              poster was recognized
+            </a> as outstanding by the course staff. Check out
+            some example answers produced by the model
+            <a target="_blank" href="./pdfs/squad_itatt_examples.pdf">
+              here
+            </a>.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="./money_app/index.html">
+              <img src="./images/money_map.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="./money_app/index.html">
+              <papertitle>
+                Predicting Bill Votes in the House of Representatives
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>,
+            Scott Kravitz
+            <br>
+            <em>CS229: Machine Learning</em>, 2015
+            <br>
+            <a target="_blank" href="./money_app/index.html">
+              Interactive Visualization</a>
+            /
+            <a target="_blank" href="./pdfs/vote_prediction.pdf">PDF</a>
+            /
+            <a target="_blank" href="pdfs/poster_final.pdf">
+              Poster</a>
+          </p>
+          <p>
+            We created a model for predicting how a member of
+            congress would vote not based on their voting history,
+            but on their party and their campaign contributions.
+            Check out the
+            <a target="_blank" href="./money_app/index.html">
+              interactive visualization
+            </a> which shows funding by district and economic
+            sector.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- PhD Research -->
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="100%" valign="middle">
+          <heading>PhD Research</heading>
+          <p>
+            I completed my PhD in the Physics department at Stanford.
+            Under my advisor,
+            <a target="_blank" href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
+              David Reis</a>, I studied atomic motion in solids
+            using the
+            <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
+              Linac Coherent Light Source</a>. <!I've led three LCLS experiments, and analyzed the ~50 TB of data
+              resulting from each.>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="25%">
+          <div style="position:relative;height:0;padding-bottom:56.25%">
+            <iframe src="https://www.youtube.com/embed/HXx_QI5htRY?ecver=2" width="120%" frameborder="0"
+              style="position:absolute;width:100%;height:100%;left:0" allowfullscreen>
+            </iframe>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://youtu.be/HXx_QI5htRY">
+              <papertitle>
+                Dissertation: Couplings of Phonons to Light
+                and One Another Studied with LCLS
+              </papertitle>
+            </a>
+            <br>
+            <strong>Tom Henighan</strong>, advisor:
+            <a target="_blank" href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
+              David Reis
+            </a>
+            <br>
+            <em>
+              Stanford University Department of Physics
+            </em>, 2016 &nbsp;
+            <br>
+            <a target="_blank" href="https://youtu.be/HXx_QI5htRY">
+              Defense</a>
+            /
+            <a target="_blank" href="https://searchworks.stanford.edu/view/12082113">
+              Thesis</a>
+          </p>
+          <p>
+            The
+            <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
+              Linac Coherent Light Source
+            </a>(LCLS) is the first x-ray source of its kind,
+            providing a combination of atomic-scale wavelengths,
+            temporally-short pulses, and high-flux. This allows for
+            previously impossible time-domain measurements of
+            phonons. My collaborators and I demonstrated techinques
+            that not only allow for measurement of phonon
+            dispersions and lifetimes, but momentum-resolved
+            phonon-phonon coupling.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
+              <img src="./images/two_pump.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
+              <papertitle>
+                Control of two-phonon correlations and the mechanism
+                of high-wavevector phonon generation by ultrafast
+                light pulses
+              </papertitle>
+            </a>
+            <br>
+            <strong>T Henighan</strong>,
+            <a target="_blank" href="https://ultrafast.stanford.edu/people/mariano-trigo">
+              M Trigo
+            </a>, M Chollet, J N Clark, S Fahy, J M Glownia,
+            M P Jiang, M Kozina, H Liu, S Song, D Zhu, and
+            <a target="_blank" href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
+              D A Reis
+            </a>
+            <br>
+            <em>
+              Physical Review B Rapid Communications
+            </em>, 2016 &nbsp;
+            <br>
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.94.020302">
+              Phys Rev B</a>
+            /
+            <a target="_blank" href="https://arxiv.org/abs/1510.02403">
+              arXiv
+            </a>
+          </p>
+          <p>
+            We showed that in Fourier-Transfor Inelastic X-ray
+            Scattering (FTIXS) measurements on high-quality crystals,
+            the pump laser couples to high-wavevector phonons
+            primarily through second-order processes.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
+              <img src="./images/iron_wiggles.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
+              <papertitle>
+                Generation mechanism of terahertz coherent acoustic
+                phonons in Fe
+              </papertitle>
+            </a>
+            <br>
+            <strong>T Henighan</strong>,
+            <a target="_blank" href="https://ultrafast.stanford.edu/people/mariano-trigo">
+              M Trigo
+            </a>,
+            <a target="_blank" href="https://www.linkedin.com/in/bonettistefano/">
+              Stefano Bonetti
+            </a>, P Granitzka, D Higley, Z Chen, M P Jiang,
+            R Kukreja, A Gray, A H Reid, E Jal, M C Hoffmann,
+            M Kozina, S Song, M Chollet, D Zhu, P F Xu, J Jeong,
+            K Carva, P Maldonado, P M Oppeneer, M G Samant,
+            S P Parkin,
+            <a target="_blank" href="https://web.stanford.edu/dept/app-physics/cgi-bin/person/reis-david/">
+              D A Reis
+            </a>, and H A Durr
+            <br>
+            <em>
+              Physical Review B Rapid Communications
+            </em>, 2016 &nbsp;
+            <br>
+            <a target="_blank" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.93.220301">
+              Phys Rev B</a>
+            /
+            <a target="_blank" href="https://arxiv.org/pdf/1509.03348.pdf">
+              arXiv
+            </a>
+          </p>
+          <p>
+            We were able to make time-resolved measurements
+            of acoustic phonons with frequencies up to 3.5 THz
+            in iron using
+            <a target="_blank" href="https://youtu.be/t7jUZwhZdd0">
+              LCLS</a>.
+          </p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
 
 
-<!-- Undergraduate Research -->
+  <!-- Fulbright Research -->
 
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>Undergraduate Research</heading>
-                    <p>
-                      I did my bachelors at
-                      <a target="_blank"
-                        href="https://youtu.be/Mc6pr8Iui4k">
-                        The Ohio State University
-                      </a>
-                      where I was advised by
-                      <a target="_blank"
-                        href="https://www.physics.ohio-state.edu/~soory/">
-                        Prof Sooryakumar</a>.
-                      I majored in engineering physics with a focus
-                      in electrical engineering.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="100%" valign="middle">
+          <heading>Fulbright Research</heading>
+          <p>
+            I spent a year at
+            <a target="_blank" href="http://www.tudelft.nl/en/">
+              Delft Institute of Technology
+            </a>(TUDelft) as a
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Fulbright_Program">
+              Fulbright Scholar
+            </a>doing biophysics research in the lab of
+            <a target="_blank" href="http://ceesdekkerlab.tudelft.nl/">
+              Cees Dekker</a>.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
 
-              <tr>
-                <td width="25%">
-                  <div class="one">
-                    <a target="_blank"
-                      href="http://aip.scitation.org/doi/10.1063/1.3562037">
-                      <img src="./images/magnetic_potential.png", width="120%">
-                    </a>
-                  </div>                
-                </td>
-                <td valign="middle" width="75%">
-                  <p>
-                    <a target="_blank"
-                      href="http://aip.scitation.org/doi/10.1063/1.3562037">
-                      <papertitle>
-                      Undergraduate Thesis: Patterned magnetic traps for
-                      magnetophoretic
-                      assembly and actuation of microrotor pumps
-                      </papertitle>
-                    </a>
-                    <br>
-                      <strong>T Henighan</strong>, D Giglio, A Chen,
-                      G Vieira, and
-                      <a target="_blank"
-                         href="https://www.physics.ohio-state.edu/~soory/">
-                        R Sooryakumar
-                      </a>
-                      <br>
-                      <em>
-                        Applied Physics Letters
-                      </em>, 2011 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="http://aip.scitation.org/doi/10.1063/1.3562037">
-                        App Phys Lett
-                      </a>
-                      /
-                      <a target="_blank"
-                        href="https://kb.osu.edu/dspace/handle/1811/45427">
-                        Undergraduate Thesis
-                      </a>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
+              <img src="./images/cycloid.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
+              <papertitle>
+                Magnetic Forces and DNA Mechanics in
+                Multiplexed Magnetic Tweezers
+              </papertitle>
+            </a>
+            <br>
+            I De Vlaminck*,
+            <strong>T Henighan</strong>*, M T J van Loenhout,
+            D Burnham,
+            <a target="_blank" href="http://ceesdekkerlab.tudelft.nl/">
+              C Dekker
+            </a> *authors contributed equally
+            <br>
+            <em>
+              PLOS ONE
+            </em>, 2012 &nbsp;
+            <br>
+            <a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0041432">
+              PLOS ONE</a>
+          </p>
+          <p>
+            We demonstrated ways of parallelizing single-molecule
+            measurements with magnetic tweezers, allowing for
+            simultaneous measurement of hundreds of molecules
+            instead of just a few.
+          </p>
+        </td>
+      </tr>
 
-                    </p>
-                    <p>
-                     We demonstrated a magnetically controlled microfluidic
-                     pump. The pump consisted of a magnetic microsphere
-                     trapped by the magnetic field gradient produced
-                     by a patterned paramagnetic film on the floor
-                     of the microchannel. Time-varying magnetic fields
-                     positioned and spun the microsphere, activating
-                     the pump.
-                    </p>
-                  </td>
-                </tr>
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
+              <img src="./images/parallel_tweezers.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
+              <papertitle>
+                Highly Parallel Magnetic Tweezers by
+                Targeted DNA Tethering
+              </papertitle>
+            </a>
+            <br>
+            I De Vlaminck,
+            <strong>T Henighan</strong>, M T J van Loenhout,
+            I Pfeiffer, J Huijts, J W J Kerssemakers, A J Katan,
+            A van Langen-Suurling, E van der Drift, C Wyman,
+            <a target="_blank" href="http://ceesdekkerlab.tudelft.nl/">
+              C Dekker
+            </a>
+            <br>
+            <em>
+              Nano Letters
+            </em>, 2011 &nbsp;
+            <br>
+            <a target="_blank" href="http://pubs.acs.org/doi/abs/10.1021/nl203299e">
+              Nano Lett</a>
+          </p>
+          <p>
+            Patterning tether sites of the DNA strands allowed
+            for furter improvement in parallelization capacity.
+          </p>
+        </td>
+      </tr>
 
-                <tr>
-                <td width="25%">
-                  <div class="one">
-                    <a target="_blank"
-                      href="http://dx.doi.org/10.1016/j.bpj.2009.10.036">
-                      <img src="./images/moving_microbeads.png", width="120%">
-                    </a>
-                  </div>                
-                </td>
-                <td valign="middle" width="75%">
-                  <p>
-                    <a target="_blank"
-                      href="http://dx.doi.org/10.1016/j.bpj.2009.10.036">
-                      <papertitle>
-                      Manipulation of Magnetically Labeled and Unlabeled
-                      Cells with Mobile Magnetic Traps
-                      </papertitle>
-                    </a>
-                    <br>
-                      <strong>T Henighan</strong>, A Chen, G Vieira,
-                     A J Hauser, F Y Yang, J J Chalmers, and
-                      <a target="_blank"
-                         href="https://www.physics.ohio-state.edu/~soory/">
-                        R Sooryakumar
-                      </a>
-                      <br>
-                      <em>
-                        Biophysical Journal
-                      </em>, 2011 &nbsp;
-                      <br>
-                      <a target="_blank"
-                        href="http://www.sciencedirect.com/science/article/pii/S0006349509016786">
-                        Biophys
-                      </a>
-                      /
-                      <a target="_blank" href="https://youtu.be/oy4fyFDLUsY">
-                        Dancing Microspheres
-                      </a>
-                      /
-                      <a targed="blank"
-                        href="https://www.google.com/patents/US8906691">
-                        Patent
-                      </a>
-                    </p>
-                    <p>
-                     Using patterned paramagnetic disks of micron scale
-                     diameter and 10s of nm thickness and externally
-                     applied weak (~10's of Oe) magnetic fields, we could
-                     control the position of magnetic microspheres on a
-                     lab-on-chip device.
-                    </p>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
+    </tbody>
+  </table>
 
 
-<!-- link -->
+  <!-- Undergraduate Research -->
 
-            <table width="100%" align="center" border="0" cellspacing="0"
-            cellpadding="20">
-              <tbody>
-                <tr>
-                  <td>
-                    <br>
-                    <p align="right">
-                      <font size="2">
-                        <a target="_blank"
-                          href="https://people.eecs.berkeley.edu/~barron/">
-                        thanks jon!
-                        </a>
-                      </font>
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td width="100%" valign="middle">
+          <heading>Undergraduate Research</heading>
+          <p>
+            I did my bachelors at
+            <a target="_blank" href="https://youtu.be/Mc6pr8Iui4k">
+              The Ohio State University
+            </a>
+            where I was advised by
+            <a target="_blank" href="https://www.physics.ohio-state.edu/~soory/">
+              Prof Sooryakumar</a>.
+            I majored in engineering physics with a focus
+            in electrical engineering.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="http://aip.scitation.org/doi/10.1063/1.3562037">
+              <img src="./images/magnetic_potential.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="http://aip.scitation.org/doi/10.1063/1.3562037">
+              <papertitle>
+                Undergraduate Thesis: Patterned magnetic traps for
+                magnetophoretic
+                assembly and actuation of microrotor pumps
+              </papertitle>
+            </a>
+            <br>
+            <strong>T Henighan</strong>, D Giglio, A Chen,
+            G Vieira, and
+            <a target="_blank" href="https://www.physics.ohio-state.edu/~soory/">
+              R Sooryakumar
+            </a>
+            <br>
+            <em>
+              Applied Physics Letters
+            </em>, 2011 &nbsp;
+            <br>
+            <a target="_blank" href="http://aip.scitation.org/doi/10.1063/1.3562037">
+              App Phys Lett
+            </a>
+            /
+            <a target="_blank" href="https://kb.osu.edu/dspace/handle/1811/45427">
+              Undergraduate Thesis
+            </a>
+
+          </p>
+          <p>
+            We demonstrated a magnetically controlled microfluidic
+            pump. The pump consisted of a magnetic microsphere
+            trapped by the magnetic field gradient produced
+            by a patterned paramagnetic film on the floor
+            of the microchannel. Time-varying magnetic fields
+            positioned and spun the microsphere, activating
+            the pump.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td width="25%">
+          <div class="one">
+            <a target="_blank" href="http://dx.doi.org/10.1016/j.bpj.2009.10.036">
+              <img src="./images/moving_microbeads.png" , width="120%">
+            </a>
+          </div>
+        </td>
+        <td valign="middle" width="75%">
+          <p>
+            <a target="_blank" href="http://dx.doi.org/10.1016/j.bpj.2009.10.036">
+              <papertitle>
+                Manipulation of Magnetically Labeled and Unlabeled
+                Cells with Mobile Magnetic Traps
+              </papertitle>
+            </a>
+            <br>
+            <strong>T Henighan</strong>, A Chen, G Vieira,
+            A J Hauser, F Y Yang, J J Chalmers, and
+            <a target="_blank" href="https://www.physics.ohio-state.edu/~soory/">
+              R Sooryakumar
+            </a>
+            <br>
+            <em>
+              Biophysical Journal
+            </em>, 2011 &nbsp;
+            <br>
+            <a target="_blank" href="http://www.sciencedirect.com/science/article/pii/S0006349509016786">
+              Biophys
+            </a>
+            /
+            <a target="_blank" href="https://youtu.be/oy4fyFDLUsY">
+              Dancing Microspheres
+            </a>
+            /
+            <a targed="blank" href="https://www.google.com/patents/US8906691">
+              Patent
+            </a>
+          </p>
+          <p>
+            Using patterned paramagnetic disks of micron scale
+            diameter and 10s of nm thickness and externally
+            applied weak (~10's of Oe) magnetic fields, we could
+            control the position of magnetic microspheres on a
+            lab-on-chip device.
+          </p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- link -->
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td>
+          <br>
+          <p align="right">
+            <font size="2">
+              <a target="_blank" href="https://people.eecs.berkeley.edu/~barron/">
+                thanks jon!
+              </a>
+            </font>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+</body>
+
 </html>
-
