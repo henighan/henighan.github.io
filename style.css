@@ -27,6 +27,8 @@ strong {
 heading {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 22px;
+    text-align: center;
+    display: block;
 }
 
 papertitle {
@@ -47,9 +49,21 @@ name {
 
 .header-row {
     display: flex;
+    margin-bottom: 50px;
+}
+
+.content-row {
+    display: flex;
 }
 
 .header-text {
+    flex: 1;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.content-text {
     flex: 1;
     margin: 0 auto;
     box-sizing: border-box;
@@ -60,15 +74,28 @@ name {
     margin: auto;
 }
 
+.content-pic {
+    margin: auto;
+}
+
 .header-pic img {
     display: block;
     margin: auto;
     height: 250px;
 }
 
+.content-pic img {
+    display: block;
+    margin: auto;
+    width: 250px;
+}
+
 /* For mobile devices */
 @media screen and (max-width: 480px) {
   body .header-row {
+    display: block;
+  }
+  body .content-row {
     display: block;
   }
   body .header-text {
