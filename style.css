@@ -40,20 +40,26 @@ name {
     font-size: 32px;
 }
 
+
+@media screen and (max-width: 480px) {
+  body .header-row {
+    display: block;
+  }
+  body .header-text {
+    padding: 5px;
+  }
+  body .container {
+      margin: 5px auto 0 auto;
+  }
+}
+
 .container {
     max-width: 800px;
     margin: 20px auto 0 auto;
 }
 
-@media screen and (min-width: 480px) {
-  .header-row {
-    display: flex;
-    /* justify-content: space-between; */
-  }
-}
-
 .header-row {
-    /* display: flex; */
+    display: flex;
 }
 
 .header-text {
