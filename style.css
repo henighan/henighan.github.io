@@ -14,31 +14,36 @@ td,
 th,
 tr,
 p,
-a {
+a,
+strong,
+heading,
+papertitle,
+name {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a,
+strong,
+papertitle {
     font-size: 14px
 }
 
-strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-}
-
 heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 22px;
     text-align: center;
     display: block;
 }
 
 papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
     font-weight: 700
 }
 
 name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 32px;
 }
 
@@ -108,4 +113,39 @@ footer {
   body .container {
       margin: 5px auto 0 auto;
   }
+}
+
+/* For large screens */
+@media screen and (min-width: 900px) {
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a,
+    strong,
+    papertitle {
+        font-size: 20px
+    }
+
+    heading {
+        font-size: 28px;
+    }
+
+    name {
+        font-size: 45px;
+    }
+
+    body .container {
+        max-width: 1200px;
+    }
+
+    body .header-pic img {
+        height: 350px;
+    }
+
+    body .content-pic img, iframe {
+        width: 350px;
+    }
 }
