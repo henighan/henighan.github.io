@@ -40,19 +40,6 @@ name {
     font-size: 32px;
 }
 
-
-@media screen and (max-width: 480px) {
-  body .header-row {
-    display: block;
-  }
-  body .header-text {
-    padding: 5px;
-  }
-  body .container {
-      margin: 5px auto 0 auto;
-  }
-}
-
 .container {
     max-width: 800px;
     margin: 20px auto 0 auto;
@@ -70,7 +57,6 @@ name {
 }
 
 .header-pic {
-    /* height: 100%; */
     margin: auto;
 }
 
@@ -78,4 +64,17 @@ name {
     display: block;
     margin: auto;
     height: 250px;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  body .header-row {
+    display: block;
+  }
+  body .header-text {
+    padding: 5px;
+  }
+  body .container {
+      margin: 5px auto 0 auto;
+  }
 }
