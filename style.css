@@ -25,6 +25,28 @@ strong {
     font-size: 14px;
 }
 
+.container {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+}
+
+.header-row {
+    display: flex;
+}
+
+.header-text {
+    flex: 1;
+    margin: 10px auto 10px auto;
+}
+
+.header-pic {
+    height: 100%;
+}
+
+.header-pic img {
+    height: 250px;
+}
+
 heading {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
     font-size: 22px;
