@@ -84,7 +84,7 @@ name {
     height: 250px;
 }
 
-.content-pic img {
+.content-pic img, iframe {
     display: block;
     margin: auto;
     width: 250px;
