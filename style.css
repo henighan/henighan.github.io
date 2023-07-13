@@ -3,6 +3,7 @@ a {
     color: #1772d0;
     text-decoration: none;
 }
+
 a:focus,
 a:hover {
     color: #f09228;
@@ -89,7 +90,8 @@ name {
     height: 250px;
 }
 
-.content-pic img, iframe {
+.content-pic img,
+iframe {
     display: block;
     margin: auto;
     width: 250px;
@@ -101,26 +103,32 @@ footer {
 
 /* For mobile devices */
 @media screen and (max-width: 480px) {
-  body .header-row {
-    display: block;
-  }
-  body .content-row {
-    display: block;
-  }
-  body .header-text {
-    padding: 5px;
-  }
-  body .container {
-      margin: 5px auto 0 auto;
-  }
-  body .content-pic img, iframe {
-      width: 100%;
-  }
-  body .header-pic img {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-  }
+    body .header-row {
+        display: block;
+    }
+
+    body .content-row {
+        display: block;
+    }
+
+    body .header-text {
+        padding: 5px;
+    }
+
+    body .container {
+        margin: 5px auto 0 auto;
+    }
+
+    body .content-pic img,
+    iframe {
+        width: 100%;
+    }
+
+    body .header-pic img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
 }
 
 /* For large screens */
@@ -153,7 +161,8 @@ footer {
         height: 350px;
     }
 
-    body .content-pic img, iframe {
+    body .content-pic img,
+    iframe {
         width: 350px;
     }
 }
