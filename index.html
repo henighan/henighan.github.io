@@ -36,12 +36,12 @@
         <p align="center">
           <name>Tom Henighan</name>
         </p>
-        I'm a member of the technical staff at <a target="_blank" href="https://anthropic.com">Anthropic</a>.
-        My
-        previous roles include member of the technical staff at
-        <a target="_blank" href="https://openai.com"> OpenAI</a>
-        and artificial intelligence engineer at <a target="_blank" href="https://beehive.ai/"> Beehive
-          AI</a>. I did my PhD in Physics at Stanford.
+        I work on large language model interpretability at
+        <a target="_blank" href="https://anthropic.com">Anthropic</a>.
+        Prior to that I worked on scaling laws at
+        <a target="_blank" href="https://openai.com"> OpenAI</a> and ML engineering at
+        at <a target="_blank" href="https://beehive.ai/"> Beehive AI</a>.
+        I did my PhD in Physics at Stanford.
         <p>
         </p>
         <p>
@@ -65,10 +65,56 @@
     <!-- Start Anthropic -->
     <heading>Anthropic</heading>
     <p>
-      As one of Anthropic's first employees, I helped build out and manage some
-      of our core infrastructure to support training and evaluation of large
-      language models. I'm now working full-time on interpretability.
+      I work on the interpretability team, which is focused mechanistically understanding large language models.
+      As one of Anthropic's first employees, I also helped build out and manage
+      some of our core infrastructure to support training and evaluation of
+      large language models.
     </p>
+
+    <div class="content-row">
+      <div class="content-pic">
+        <a target="_blank" href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html">
+          <img src="./images/ggbridge_steering.png">
+        </a>
+      </div>
+      <div class="content-text">
+        <p>
+          <a target="_blank" href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html">
+            <papertitle>
+              Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet
+            </papertitle>
+          </a>
+          <br>
+          Adly Templeton*, Tom Conerly*, Jonathan Marcus, Jack Lindsey, Trenton
+          Bricken, Brian Chen, Adam Pearce, Craig Citro, Emmanuel Ameisen, Andy
+          Jones, Hoagy Cunningham, Nicholas L Turner, Callum McDougall, Monte
+          MacDiarmid, Alex Tamkin, Esin Durmus, Tristan Hume, Francesco Mosconi,
+          C. Daniel Freeman, Theodore R. Sumers, Edward Rees, Joshua Batson,
+          Adam Jermyn, Shan Carter, Chris Olah, <strong>Tom Henghan</strong>
+          <br>
+          <em>
+            transformer-circuits
+          </em>, 2024 &nbsp;
+          <br>
+          <a target="_blank" href="https://www.anthropic.com/research/mapping-mind-language-model">Blogpost</a>
+          /
+          <a target="_blank" href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html">Paper</a>
+        </p>
+        <p>
+          We scaled Dictionary Learning to extract millions of features from
+          Claude 3 Sonnet, Anthropic's medium-scale production model at the time of
+          writing. The resulting features are highly abstract: multilingual,
+          multimodal, and generalizing between concrete and abstract references.
+          There appears to be a systematic relationship between the frequency of
+          concepts and the dictionary size needed to resolve features for them.
+          Features can be used to steer large models (see e.g. Influence on
+          Behavior). We observe features related to a broad range of safety
+          concerns, including deception, sycophancy, bias, and dangerous
+          content.
+        </p>
+      </div>
+    </div>
+
 
     <div class="content-row">
       <div class="content-pic">
